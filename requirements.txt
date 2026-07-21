@@ -1,0 +1,26 @@
+# EcoRoute AI - Python Dependencies
+# ===================================
+# Install all dependencies with:
+#   pip install -r requirements.txt
+#
+# NOTE: osmnx may also install several geo-dependencies automatically (shapely, pyproj, etc.)
+
+# ── Web Framework ─────────────────────────────────────────────────────────────
+fastapi==0.111.0           # Modern Python web framework with automatic OpenAPI docs
+uvicorn[standard]==0.29.0  # ASGI server to run FastAPI (with WebSocket support)
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy==2.0.30         # ORM for database operations (supports SQLite, PostgreSQL, etc.)
+
+# ── Data Validation ───────────────────────────────────────────────────────────
+pydantic==2.7.1            # Data validation library used by FastAPI for request/response schemas
+
+# ── Road Network & Graph ──────────────────────────────────────────────────────
+osmnx==1.9.3               # Downloads real road network data from OpenStreetMap
+networkx==3.3              # Graph library; provides Dijkstra's shortest path algorithm
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+requests==2.32.2           # HTTP client used in test_api.py to call the API endpoints
+
+# ── Optional but recommended ──────────────────────────────────────────────────
+python-multipart==0.0.9    # Required by FastAPI for form data handling
